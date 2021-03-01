@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                                                     .setContentText("UUID: " + UUID.randomUUID())
                                                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                                                     .setContentIntent(pendingIntent)
-
+                                                    .setAutoCancel(true)
         with(NotificationManagerCompat.from(this)) {
             notify(1, notificationBuilder.build())
         }
